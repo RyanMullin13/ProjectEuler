@@ -28,8 +28,35 @@ grid.append( "20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16")
 grid.append( "20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54")
 grid.append( "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
 
-intGrid = [i.split() for i in grid]
-intGrid = [[int(j) for j in i] for i in intGrid]
+grid = [i.split() for i in grid]
+grid = [[int(j) for j in i] for i in grid]
 
+largest = 0
 
+#Horizontal Product
+
+for i in grid:
+    for j in range(len(i) - 4):
+        product = 1
+        for k in range(4):
+            product *= i[j+k]
+        if product > largest:
+            largest = product
+
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
