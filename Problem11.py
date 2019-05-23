@@ -33,30 +33,27 @@ grid = [[int(j) for j in i] for i in grid]
 
 largest = 0
 
-#Horizontal Product
-
-for i in grid:
-    for j in range(len(i) - 4):
-        product = 1
-        for k in range(4):
-            product *= i[j+k]
-        if product > largest:
-            largest = product
-
+for i in range(20):
+    for j in range(16):
+        #Horizontal
+        product = grid[i][j]*grid[i][j+1]*grid[i][j+2]*grid[i][j+3]
+        if product > largest:  largest = product
         
+        #Verical
+        product = grid[j][i]*grid[j+1][i]*grid[j+2][i]*grid[j+3][i]
+        if product > largest:   largest = product
+
+for i in range(16):
+    for j in range(16):
+        product = grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3]
+        if product > largest:   largest = product
+
+for i in range(3,20):
+    for j in range(16):
+        product = grid[i][j]*grid[i-1][j+1]*grid[i-2][j+2]*grid[i-3][j+3]
+        if product > largest:   largest = product
+
+         
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+print("Answer is: " + str(largest))
