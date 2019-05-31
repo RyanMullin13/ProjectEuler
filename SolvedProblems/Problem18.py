@@ -29,3 +29,5 @@ def triangleMax(triangle):
 ans = triangleMax(nums)
 
 print("Answer is: " + str(ans))
+
+file.close()
