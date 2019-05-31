@@ -10,3 +10,12 @@ nums = []
 for i in file:
     nums.append([int(i) for i in i.rstrip('\n').split(" ")])
 
+
+    
+
+def rowMax(a,b):
+    for i in range(len(a)):
+        a[i] = max(  (a[i] + b[i]) , (a[i] + b[i+1]) )
+    return a
+
+
