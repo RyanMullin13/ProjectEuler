@@ -23,4 +23,9 @@ nums = list(range(1,27))
 
 value = dict(zip(letters,nums))
 
-print(value['A'])
+answer = 0
+
+for i in range(len(names)):
+    for j in names[i]:
+        answer += (i+1) * value[j]
+print("Answer is: " + str(answer))
